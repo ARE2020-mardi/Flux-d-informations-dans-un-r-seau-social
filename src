@@ -1,0 +1,158 @@
+import random
+from tkinter import *
+
+
+Mafenetre=Tk()
+Largeur=600
+Longueur=500
+Model=Canvas(Mafenetre, width =Largeur, height =Longueur, bg ='white',xscrollincrement=1)
+Nb_amis=5
+tour=0
+x0=0
+y0=0
+Aft='after'
+rayon = 20
+DX=0
+DY=0
+nb_direction=0
+direction='u'
+x_base=Largeur/2
+y_base=Longueur/2
+Model.create_oval(x_base-rayon, y_base-rayon, x_base+rayon, y_base+rayon,  fill='blue',tags=('tag',direction))
+credibilité=5
+"""fonction qui dessine notre programme"""
+def dessine_vip():
+    global tour,Aft,DX,DY,nb_direction,direction
+    global z
+    
+    nb=random.randint(1,Nb_amis)
+    n=0
+    if  (not DX and not DY):
+        for n in range(nb-1):
+            x = random.randint(0,Largeur)
+            y = random.randint(0,Longueur)
+            if random.randint(0,10)<=credibilité:
+                color='blue'
+            else:color='white'
+            Model.create_oval(x-rayon, y-rayon, x+rayon, y+rayon,  fill=color,tags=('tag',direction))
+            Model.create_line(x, y,x_base,y_base,fill='red',arrow='first', width=3,tags=('tag',direction))
+
+        if direction =='u':
+           x = random.randint(0,Largeur) 
+           y = random.randint(0,Longueur*0.1)
+           if not nb_direction:
+                nb_direction=random.randint(3,10)
+                Model.delete('l')
+                Model.delete('r')
+                Model.delete('d')
+                direction=['u','l','r'][random.randint(0,2)]
+        elif direction =='d':
+           x = random.randint(0,Largeur) 
+           y = random.randint(Longueur*0.9,Longueur)
+           if not nb_direction:
+                nb_direction=random.randint(3,10)
+                Model.delete('l')
+                Model.delete('r')
+                Model.delete('u')
+                direction=['d','l','r'][random.randint(0,2)]
+        elif direction =='l':
+           x = random.randint(0,Largeur*0.1) 
+           y = random.randint(0,Longueur)
+           if not nb_direction:
+                nb_direction=random.randint(3,10)
+                direction=['u','d','l'][random.randint(0,2)]
+                Model.delete('u')
+                Model.delete('r')
+                Model.delete('d')
+        else:
+            x = random.randint(Largeur*0.9,Largeur)
+            y = random.randint(0,Longueur)
+            if not nb_direction:
+                nb_direction=random.randint(3,10)
+                Model.delete('l')
+                Model.delete('d')
+                Model.delete('u')
+                direction=['u','d','r'][random.randint(0,2)]
+        nb_direction-=1       
+        Model.create_oval(x-rayon, y-rayon, x+rayon, y+rayon,  fill='blue',tags=('tag',direction))
+        Model.create_line(x, y,x_base,y_base,fill='red',arrow='first', width=3,tags=('tag',direction))
+        DX=x-Largeur/2
+        DY=y-Longueur/2
+
+        dessine_vip()
+    
+    else:
+        global dx,dy
+        dx=0
+        dy=0
+        if  DX:
+            if DX>0:
+                if DX-z<0:
+                    dx=-DX
+                    DX-=DX
+                else:
+                    dx=-z
+                    DX-=z
+            else:
+                if DX+z>0:
+                    dx=-DX
+                    DX-=DX
+                else:
+                    dx=z
+                    DX+=dx
+        if  DY:
+            if DY>0:
+                if DY-z<0:
+                    dy=-DY
+                    DY-=DY
+                else:
+                    dy=-z
+                    DY-=z
+            else:
+                if DY+z>0:
+                    dy=-DY
+                    DY-=DY
+                else:
+                    dy=z
+                    DY+=dy
+
+        Model.move('tag',dx,dy)
+        tour+=1
+        Aft=Mafenetre.after(Vitesse,dessine_vip)
+z=1
+Vitesse=int(1/(z*30*10**-3))
+"""fonction qui permet de changé l'evolution de la dynamique,la vitesse de la dynamique"""
+def change_vitesse(x):
+    Mafenetre.after_cancel(Aft)
+    x=int(x)
+    if x==0:
+        return
+    
+    global z,Vitesse
+    
+    z=x
+    Vitesse=int(1/(z*30*10**-3))
+    dessine_vip()
+"""fonction qui permet de changé la credibilité et de voir si les gens considére l'information pertinent ou pas"""
+def change_cred(x):
+    global credibilité
+    credibilité=int(x)
+"""fonction qui permet de changé le maximum d'amis entre les personnes "VIP" et puis de mettre un nombre aléatoire de nombre d'amis"""
+def Change_amis(x):
+    global Nb_amis
+    Nb_amis=int(x)
+echelle_v =Scale(Mafenetre,to=33,tickinterval=3, orient='horizontal' ,label='Vitesse',command=change_vitesse, length='10c')
+echelle_c =Scale(Mafenetre,from_=1,tickinterval=1, to=10,resolution=1, orient='horizontal',label='Crédibilité',command=change_cred, length='5c')
+echelle_a =Scale(Mafenetre,from_=1,tickinterval=1, to=5,resolution=1, orient='horizontal',label='Nb Amis',command=Change_amis, length='5c')
+echelle_c.set(5)
+echelle_a.set(5)
+echelle_v.set(4)
+Mafenetre.rowconfigure(29, weight=1)
+Model.grid(row=0,rowspan=30,sticky="nsew")
+echelle_c.grid(row=1,column=1,sticky="n")
+echelle_v.grid(row=3,column=1,sticky="n")
+echelle_a.grid(row=2,column=1,sticky="n")
+
+
+dessine_vip()
+Mafenetre.mainloop()
