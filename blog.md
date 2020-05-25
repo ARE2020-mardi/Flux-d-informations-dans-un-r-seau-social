@@ -13,4 +13,4 @@ Ajout du code Python dans le fichier "MonFichierPython.ipynb"
 ### Auteur: Y.Benchikh
 Modifications apportées au fichier "index.md".
  
-<a href="index.html"> Retour à la page principale </a>
+<a href="index.html"> Retour à la page principale <https://github.com/ARE2020-mardi/Flux-d-informations-dans-un-reseau-social>
