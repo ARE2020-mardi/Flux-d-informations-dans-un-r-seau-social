@@ -1,7 +1,10 @@
-Semaine 1: création du site
-semaine 2: Ajout du code Python
-semaine 3: Finalisation du Projet
-semaine 4: Rendu du Projet.
+Hello! The team "Flux d'information dans un réseau social" is working on this project.
 
-Merci pour votre intérêt!
+Hello again! The team modified the following files: "src" and "hello.md", go check them! Go! Go! Go!
+
+Bonjour les gars! On est entrain de finaliser le projet.
+
+
+
+
 

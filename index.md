@@ -7,7 +7,7 @@ C’est avec une modélisation numérique qu’il a été possible d’avoir une
 
 ## Information Flow in a Social Network
 Spreading information on social networks, such as Facebook or Instagram or Twitter, is a rather complex area that is composed of several parameters that vary from one network to another.
-As you may know, this theme is of crucial importance in our world because nowadays, social networks occupy an important place or indispensable, consulting them became routine to the majority of us.
+As you may know, this theme is of crucial importance in our world because nowadays, social networks occupy an important place and are indispensable, consulting them became routine to the majority of us.
 Our research project helps to better identify how information spreads and how this propagation becomes very rapidly exponential thus triggering the «Buzz».
 This spread will be studied in a general way, that is to say, it will be composed of several parameters that are those that make it vary in a visible and concrete way(likes,reactions, shares...etc),which will allow us to anticipate the effects of information on a community of Internet users according to the criteria it meets among those announced previously.
 It is with numerical modelling that it was possible to have an approach to the phenomenon.
@@ -26,8 +26,9 @@ It is with numerical modelling that it was possible to have an approach to the p
 **Hypothèse principale :** Les relations entre personnes: plus les gens ont des liens étroits d'amitié plus l'information va se propager rapidement.
 
 **Hypothèses secondaires :** 
-L'importance de l'information: plus elle est élevée, plus sa circulation est large et rapide.
-Le temps que dure la propagation: plus elle est importante plus sa propagation dure (ex: Coronavirus).
+L'importance de l'information: plus elle est élevée, plus sa circulation est large et rapide.        
+
+Le temps que dure la propagation: plus elle est importante plus sa propagation dure longtemps (ex: Coronavirus).
 
 **Objectifs :** Comprendre l'influence de certains paramètre sur la propagation d'une information en les faisant varier lors de la modélisation.
 
