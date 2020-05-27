@@ -6,11 +6,14 @@
 #### Auteur: Y.Benchikh
 Création du site (Aller dans index.md puis cliquer sur le lien en bas. Bonne viste).
 ### Semaine 2
-###  Auteur: Y.Benchikh
+###  Auteur: Y.BENCHIKH
 Création du Fichier "src" dans lequel on a créé ensuite le fichier "MonFichierPython.ipynb".
 Ajout du code Python dans le fichier "MonFichierPython.ipynb"
 ### Semaine 3
-### Auteur: Y.Benchikh
-Modifications apportées au fichier "index.md".
+### Auteur: Y.BENCHIKH
+Description synthétique du projet
+## Semaine 4
+### Auteur: Y.BENCHIKH
+Présentation structurée des résultats.
  
 <a href="index.html"> Retour à la page principale <https://github.com/ARE2020-mardi/Flux-d-informations-dans-un-reseau-social>
