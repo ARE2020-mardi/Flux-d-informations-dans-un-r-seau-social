@@ -16,4 +16,4 @@ Description synthétique du projet
 ### Auteur: Y.BENCHIKH
 Présentation structurée des résultats.
  
-<a href="index.html"> Retour à la page principale </a>
+<a href="https://are2020-mardi.github.io/Flux-d-informations-dans-un-reseau-social/index.html"> Retour à la page principale </a>
