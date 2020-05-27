@@ -92,7 +92,7 @@ C’est pour ceci qu’il a paru judicieux pour la simplicité du programme et d
 
 Bon essai !
 
-## Lien vers page de blog : <a href="blog.html"> C'est ici ! </a>
+## Lien vers page de blog : <a href="https://are2020-mardi.github.io/Flux-d-informations-dans-un-reseau-social.html"> C'est ici ! </a>
 
 ## Bibliographie :
 
