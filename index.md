@@ -82,7 +82,15 @@ Cependant la vitesse de propagation ne dépend pas uniquement bien que grandemen
 
 Pour prendre en compte ce paramètre il suffira de régler un curseur pour choisir une valeur de 1 à 10 qui décidera de même de la vitesse de propagation de l’information.
 
-Présentation du choix de modélisation, des outils, du code et des résultats (tableaux, courbes, animations...) (**avec une analyse critique**).
+### 4. Un environnement idéal:
+
+Au départ de la présentation il a été question de parler de la crédibilité d’une information en présentant ce paramètre comme étant uniquement relatif à la nature de l’information et non pas à la personne recevant l’information.
+
+Cependant ca n’est pas totalement vraie pour une même information il peut y avoir deux avis différent concernant la crédibilité. Il suffit simplement de voir la polémique que provoque le débat sur l’existence du réchauffement climatique : la controverse existe dans tous les sujets possibles, même si cette dernière quelques fois n’a aucun sens, il se peut que l’homme contredise pour…. Contredire, simplement.
+
+C’est pour ceci qu’il a paru judicieux pour la simplicité du programme et de la modélisation de faire un seul tirage pseudo-aléatoire de la valeur de crédibilité afin d’obtenir une linéarité et ne pas forcer l’appareil à refaire le tirage aléatoire pour chaque personne.
+
+Bon essai !
 
 ## Lien vers page de blog : <a href="blog.html"> C'est ici ! <https://are2020-mardi.github.io/Flux-d-informations-dans-un-reseau-social/>
 
