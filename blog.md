@@ -16,4 +16,4 @@ Description synthétique du projet
 ### Auteur: Y.BENCHIKH
 Présentation structurée des résultats.
  
-<a href="index.html"> Retour à la page principale <>
+<a href="index.html"> Retour à la page principale </a>
