@@ -38,7 +38,7 @@ Le temps que dure la propagation: plus elle est importante plus sa propagation d
 
 Présentation du choix de modélisation, des outils, du code et des résultats (tableaux, courbes, animations...) (**avec une analyse critique**).
 
-## Lien vers page de blog : <a href="blog.html"> C'est ici ! <ttps://are2020-mardi.github.io/Flux-d-informations-dans-un-reseau-social/>
+## Lien vers page de blog : <a href="blog.html"> C'est ici ! <https://are2020-mardi.github.io/Flux-d-informations-dans-un-reseau-social/>
 
 ## Bibliographie :
 
